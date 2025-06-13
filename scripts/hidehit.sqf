@@ -1,0 +1,1 @@
+{ deleteVehicle _x; } forEach (allMissionObjects "Sign_Sphere10cm_F");

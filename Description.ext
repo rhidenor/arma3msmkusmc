@@ -1,0 +1,109 @@
+author			= "Mumus";
+onLoadName		= "USMC Bootcamp";
+onLoadMission	= "USMC Bootcamp";
+loadScreen 		= "images\fob.paa";
+class Header
+{
+	gameType = "Coop";	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 33;	// maximum number of players the mission supports
+};
+
+
+
+zeusCompositionScriptLevel = 2;
+
+//-1 - Dont respawn on start. Don't run respawn script on start.
+// 0 - Dont respawn on start. Run respawn script on start.
+// 1 - Respawn on start. Run respawn script on start.
+respawnOnStart = -1; // Default: 0
+respawnTemplates[] = { "MenuPosition", "Tickets" };
+
+//Manual respawn button
+respawnButton = 1; // 0: disabled - 1: enabled. Default: 1
+
+//Disable AI for playable slots
+disabledAI = 1; // 0: disabled - 1: enabled. Default: 0
+
+//Disable selected chat channels
+//disableChannels[] = { 0, 1, 2, 3, 4, 5 }; // simple channel ID list
+/*
+Channel list
+************
+Global:	0
+Side:	1
+Command	2
+Group	3
+Vehicle	4
+Direct	5
+*/
+
+
+//enableDebugConsole
+enableDebugConsole = 1; // dangerous in MP
+
+//Corpsemanager
+corpseManagerMode = 3; // Default: 0 for SP, 2 for MP
+/*
+0 (Default in SP) = None - None of the units are automatically managed by the manager
+1 = All - All units are automatically managed by the manager
+2 (Default in MP) = None_But_Respawned - Only units that can respawn are automatically managed by the manager
+3 = All_But_Respawned - All units are automatically managed by the manager with the exception of respawned ones (opposite to mode 2)
+*/
+corpseLimit = 10; // Default: 15
+corpseRemovalMinTime = 60; // seconds. Default: 10
+corpseRemovalMaxTime = 120; // seconds. Default: 3600
+wreckManagerMode = 0; // Default: 0 for SP, 2 for MP
+wreckLimit = 5; // seconds. Default: 15
+wreckRemovalMinTime = 60; // seconds. Default: 10
+wreckRemovalMaxTime = 120; // seconds. Default: 36000 (10 hours)
+weaponholderManagerMode = 3; // Default: 0
+weaponholderRemovalMinTime = 120;
+weaponholderRemovalMaxTime = 600;
+minPlayerDistance = 100; // meters. Default: 0
+
+class CfgFunctions {
+	#include "scripts\functions.hpp"
+};
+
+// Free Fall Off The Ramp
+#include "scripts\ffr\menu.hpp"
+
+//description.ext
+class CfgSounds
+{
+ sounds[] = {};
+	#include "scripts\cbrn\sounds\sounds.hpp"
+		class heartbeat
+			{
+			name = "heartbeat";
+			sound[] = {"\sounds\heartbeat.ogg", 300, 1};
+			titles[] = {0,""};
+			};
+		class automata
+			{
+			name = "automata";
+			sound[] = {"\sounds\automata.ogg", 300, 1};
+			titles[] = {0,""};
+			};
+};
+
+class RscTitles {
+    #include "scripts\cbrn\rsctitles.hpp"
+};
+
+/*
+//AI skills
+class CfgAISkill
+{
+    aimingAccuracy[] = {0, 0.2, 1, 0.5};
+    aimingShake[] = {0, 0.2, 1, 0.5};
+    aimingSpeed[] = {0, 0.2, 1, 0.5};
+    commanding[] = {0, 0.2, 1, 0.5};
+    courage[] = {0, 0.2, 1, 0.5};
+    general[] = {0, 0.2, 1, 0.5};
+    reloadSpeed[] = {0, 0.2, 1, 0.5};
+    spotDistance[] = {0, 0.2, 1, 0.5};
+    spotTime[] = {0, 0.2, 1, 0.5};
+};
+*/
