@@ -1,7 +1,7 @@
-author			= "Mumus";
-onLoadName		= "USMC Bootcamp";
-onLoadMission	= "USMC Bootcamp";
-loadScreen 		= "images\fob.paa";
+author			= "A mission készítője";
+onLoadName		= "A mission címe";
+onLoadMission	= "A mission címe";
+loadScreen 		= "images\fob.paa"; //intro kép útvonala
 class Header
 {
 	gameType = "Coop";	// Game type
