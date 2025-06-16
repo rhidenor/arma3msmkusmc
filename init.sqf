@@ -61,6 +61,7 @@ fnc_hideObjectsAroundTent = {
     { _x hideObjectGlobal true } forEach (nearestTerrainObjects [_medicalTent, ["BUILDING", "BUNKER", "BUSH", "BUSSTOP", "CHAPEL", "CHURCH", "CROSS", "FENCE", "FOREST BORDER", "FOREST SQUARE", "FOREST TRIANGLE", "FOREST", "FORTRESS", "FOUNTAIN", "FUELSTATION", "HIDE", "HOSPITAL", "HOUSE", "LIGHTHOUSE", "MAIN ROAD", "POWER LINES", "POWERSOLAR", "POWERWAVE", "POWERWIND", "QUAY", "RAILWAY", "ROAD", "ROCK", "ROCKS", "RUIN", "SHIPWRECK", "SMALL TREE", "STACK", "TOURISM", "TRACK", "TRAIL", "TRANSMITTER", "TREE", "VIEW-TOWER", "WALL", "WATERTOWER"], 20]);
 };
 
+
 // Vehicle configs
 sleep 30;
 execVM "scripts\vehicles.sqf";
