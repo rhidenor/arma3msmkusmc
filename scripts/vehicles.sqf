@@ -61,7 +61,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -100,7 +99,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -139,7 +137,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -159,7 +156,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -179,7 +175,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -715,7 +710,26 @@
 } forEach vehicles;
 
 {
-    if (typeOf _x == "rhsusf_CH53e_USMC_D_cargo") then {
+    if (typeOf _x == "rhsusf_CH53E_USMC_D") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["driver", "copilot", "gunner", "crew"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "rhsusf_CH53E_USMC_D") then {
 		//Vehicle texture
 
 		//Vehicle locks
@@ -863,7 +877,6 @@
 		//Vehicle cargo config
 
 		//Vehicle special attributes
-        [_x, 10000] remoteExec ["setMass", 0, _x];
     };
 } forEach vehicles;
 
@@ -938,6 +951,254 @@
 		//Vehicle inventory
 		//Vehicle cargo config
         [_x, 20] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Recovery_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Refuel_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Reammo_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Repair_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Open_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["crew"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 20] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MTVR_Closed_USMC_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["crew"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 20] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_Osprey_VIV_Transport_USMC_D") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["driver", "copilot", "gunner", "crew"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 20] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_Osprey_USMC_D") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["driver", "copilot", "gunner", "crew"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 20] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_LAV25_HQ_US_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		[_x, ["ACRE_VRC103", "Command Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_LAV25_US_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["driver", "commander", "crew", "ffv"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_AAV_US_DES") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+        [_x, 4] call ace_cargo_fnc_setSpace;
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MaxxPro_M2_US") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+
+		//Vehicle special attributes
+    };
+} forEach vehicles;
+
+{
+    if (typeOf _x == "UK3CB_B_MaxxPro_MK19_US") then {
+		//Vehicle texture
+
+		//Vehicle locks
+
+		//Vehicle fuel consumption
+        _x setFuelConsumptionCoef 1.2;
+		//Remove existing racks
+		_x call acre_api_fnc_removeAllRacksFromVehicle;
+		//Add rack(s)
+		[_x, ["ACRE_VRC103", "Vehicle LR Radio", "AN/PRC-117F", false, ["inside"], [], "ACRE_PRC117F", [], []], true, {}] call acre_api_fnc_addRackToVehicle;
+		//Vehicle inventory
+		//Vehicle cargo config
+
 		//Vehicle special attributes
     };
 } forEach vehicles;

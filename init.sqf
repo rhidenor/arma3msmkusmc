@@ -62,5 +62,5 @@ fnc_hideObjectsAroundTent = {
 };
 
 // Vehicle configs
+sleep 30;
 execVM "scripts\vehicles.sqf";
-
